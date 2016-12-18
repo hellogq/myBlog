@@ -8,12 +8,32 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>我的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="1.基本篇1.1. 什么是Canvascanvas 是 HTML5 提供的一个用于展示绘图效果的标签. canvas 原意画布, 帆布. 在 HTML 页面中用于展示绘图效果. 最早 canvas 是苹果提出的一个方案, 今天已经在大多数浏览器中实现.1canvas 英 [&amp;apos;kænvəs]  美 [&amp;apos;kænvəs]   帆布 画布
+1.1.1.canvas 的基本用法基本语法1">
+<meta property="og:type" content="article">
 <meta property="og:title" content="我的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/12/18/01.Canvas-1/index.html">
 <meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="1.基本篇1.1. 什么是Canvascanvas 是 HTML5 提供的一个用于展示绘图效果的标签. canvas 原意画布, 帆布. 在 HTML 页面中用于展示绘图效果. 最早 canvas 是苹果提出的一个方案, 今天已经在大多数浏览器中实现.1canvas 英 [&amp;apos;kænvəs]  美 [&amp;apos;kænvəs]   帆布 画布
+1.1.1.canvas 的基本用法基本语法1">
+<meta property="og:image" content="http://yoursite.com/地址">
+<meta property="og:image" content="http://yoursite.com/地址">
+<meta property="og:image" content="http://yoursite.com/图片地址">
+<meta property="og:image" content="http://yoursite.com/地址">
+<meta property="og:image" content="http://yoursite.com/地址">
+<meta property="og:image" content="http://yoursite.com/地址">
+<meta property="og:image" content="http://yoursite.com/地址">
+<meta property="og:image" content="http://yoursite.com/地址">
+<meta property="og:image" content="http://yoursite.com/地址">
+<meta property="og:image" content="http://yoursite.com/地址">
+<meta property="og:image" content="http://yoursite.com/地址">
+<meta property="og:image" content="http://yoursite.com/地址">
+<meta property="og:updated_time" content="2016-11-08T06:14:35.480Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的博客">
+<meta name="twitter:description" content="1.基本篇1.1. 什么是Canvascanvas 是 HTML5 提供的一个用于展示绘图效果的标签. canvas 原意画布, 帆布. 在 HTML 页面中用于展示绘图效果. 最早 canvas 是苹果提出的一个方案, 今天已经在大多数浏览器中实现.1canvas 英 [&amp;apos;kænvəs]  美 [&amp;apos;kænvəs]   帆布 画布
+1.1.1.canvas 的基本用法基本语法1">
+<meta name="twitter:image" content="http://yoursite.com/地址">
   
     <link rel="alternative" href="/atom.xml" title="我的博客" type="application/atom+xml">
   
@@ -139,560 +159,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-05.Nodejs-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="模块化的思想"><a href="#模块化的思想" class="headerlink" title="模块化的思想"></a>模块化的思想</h3><pre><code>一次开发多次使用,将代码封装起来形成一个模块
-</code></pre><h3 id="JavaScript模块化中常见的问题"><a href="#JavaScript模块化中常见的问题" class="headerlink" title="JavaScript模块化中常见的问题"></a>JavaScript模块化中常见的问题</h3><pre><code>命名冲突(团队协作开发,不同开发人员的变量和函数名可能会相同)
-文件依赖(代码重用时,引入js文件的数目可能少了或者引入的顺序不对)
-</code></pre><h3 id="模块化产生的优点"><a href="#模块化产生的优点" class="headerlink" title="模块化产生的优点"></a>模块化产生的优点</h3><ol>
-<li>提高开发效率<ul>
-<li>代码方便重用,别人开发的模块可以直接拿过来用,不需要重复开发类似的功能</li>
-</ul>
-</li>
-<li>节省网络资源,提高客户响应</li>
-<li>便于维护<ul>
-<li>维护阶段,需求变化比较频繁,使用模块化的开发方式更容易维护.<h3 id="模块化规范"><a href="#模块化规范" class="headerlink" title="模块化规范"></a>模块化规范</h3></li>
-</ul>
-</li>
-<li>AMD       (require.js)</li>
-<li>CMD       (sea.js)</li>
-<li>CommonJS  (Node.js)<h3 id="Sea-js"><a href="#Sea-js" class="headerlink" title="Sea.js"></a>Sea.js</h3> 一个基于CMD规范实现的模块化开发解决方案<h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4></li>
-</ol>
-<ul>
-<li>简单友好的义模块定规范</li>
-<li>自然直观的代码组织方式</li>
-<li>seaJS推崇一个模块一个文件,遵循统一的写法<h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3></li>
-</ul>
-<ol>
-<li>引入sea.js库</li>
-<li>定义模块<ul>
-<li>define(function (require , exports , module){模块代码})</li>
-<li>// require 用来获取其他模块提供的接口</li>
-<li>// exports 是一个对象,用来向外提供模块接口.exports仅仅是module.exports的一个引用</li>
-<li>// 不能直接给exports直接赋值</li>
-<li>// module 是一个对象,上面存储了与当前模块相关联的属性和方法</li>
-</ul>
-</li>
-<li>暴露接口<ul>
-<li>exports</li>
-<li>module.exports</li>
-<li>相当于 return(返回一个值)</li>
-<li>扔出去的永远都是module.exports这个对象</li>
-</ul>
-</li>
-<li>依赖模块<ul>
-<li>require(‘模块的路径’)</li>
-<li>以 ./ ../ 开头的相对路径  是相对于当前模块所在的位置</li>
-<li>不以 ./ ../ 开头的路径,会相对于模块的基础路径解析（配置项中的base）</li>
-</ul>
-</li>
-<li>启动模块系统<ul>
-<li>// 回调函数可以省略</li>
-<li>seajs.use(‘模块路径’);</li>
-<li>// 加载模块,模块加载完成之后执行的代码</li>
-<li>seajs.use(‘模块路径’ , function (模块对象){业务代码});</li>
-<li>// 一次加载多个模块的方式</li>
-<li>seajs.use([‘模块路径’,’模块路径’ ], function (模块对象){业务代码});</li>
-</ul>
-</li>
-</ol>
-<h4 id="exports和module-exports"><a href="#exports和module-exports" class="headerlink" title="exports和module.exports"></a>exports和module.exports</h4><ul>
-<li>功能: 通过给exports或者module.exports动态的加载变量,函数或对象,外部会获取到该接口.</li>
-<li>exports 等价于 module.exports;</li>
-<li>可以通过多次给exports加载属性向外暴露</li>
-<li>不能直接给exports赋值</li>
-<li>打破作用域的封装性,让外部可以调用里面的内容</li>
-<li>如果想暴露单个变量,函数或者对象可以通过直接给module.exports赋值即可<ul>
-<li>两者之间的区别就是一个不能直接赋值,一个能直接赋值</li>
-</ul>
-</li>
-</ul>
-<h3 id="模块配置"><a href="#模块配置" class="headerlink" title="模块配置"></a>模块配置</h3><p>base添加规则<br>完整的绝对路径 不会加base<br>以 “.” 开头 会相对于当前（被调用的）模块解析地址。 如果不存在被调用的模块（如seajs.use() ）， 则会相对于当前页面解析地址。<br>以 “/“ 开头 相对于当前页面的根目录 解析地址<br>普通命名 直接加上base前缀<br>base值<br>base 默认值是 seajs所在目录<br>seajs.config()中base的解析与ID命名解析规则相同</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/18/05.Nodejs-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-04.流行框架--AngularJS01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="AngluarJS"><a href="#AngluarJS" class="headerlink" title="AngluarJS"></a>AngluarJS</h1>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/18/04.流行框架--AngularJS01/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-03.流行框架--Git02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="3-1-3-Git分支"><a href="#3-1-3-Git分支" class="headerlink" title="3.1.3 Git分支"></a>3.1.3 Git分支</h3><pre><code>值得注意的是所有的提交实际上都是在分支的基础上进行的
-</code></pre><ul>
-<li>‘HEAD’ 指针,用来表明当前处于哪个分支的哪个版本</li>
-<li>我们在初始化仓库的时候(实际上是产生第一次提交的时候)Git会默认帮我们创建一个master的分支,并且有指针指向了末端<br><img src="地址" alt="图片"><h4 id="1-创建分支"><a href="#1-创建分支" class="headerlink" title="1.创建分支"></a>1.创建分支</h4>  git branch 分支名称</li>
-<li>新的分支会在当前分支原有的历史版本的节点上进行创建—-子分支</li>
-<li>新创建的子分支会继承父分支的所有提交历史<br><img src="地址" alt="图片"><h4 id="2-获取分支"><a href="#2-获取分支" class="headerlink" title="2.获取分支"></a>2.获取分支</h4>  git branch<h4 id="3-切换分支"><a href="#3-切换分支" class="headerlink" title="3.切换分支"></a>3.切换分支</h4>  git checkout 分支名称<h4 id="4-再次提交操作"><a href="#4-再次提交操作" class="headerlink" title="4.再次提交操作"></a>4.再次提交操作</h4></li>
-<li>修改bug之后提交(git add… git commit -m …)</li>
-<li>这次的提交历史版本就会记录在新的分支上,并且HEAD伴随新分支在移动<br><img src="地址" alt="图片"><h4 id="5-合并分支"><a href="#5-合并分支" class="headerlink" title="5.合并分支"></a>5.合并分支</h4>  git merge 分支名称</li>
-<li>例如  指针指在cart这个分支上,git merge master 是将master合并到了cart上<br><img src="地址" alt="图片"><h4 id="6-删除分支"><a href="#6-删除分支" class="headerlink" title="6.删除分支"></a>6.删除分支</h4>  git branch -d/D 分支名称</li>
-<li>-D是强制删除</li>
-<li>删除的文件是本地的,传到服务器上的并没有被删除<h4 id="7-创建并切换到分支"><a href="#7-创建并切换到分支" class="headerlink" title="7.创建并切换到分支"></a>7.创建并切换到分支</h4>  git checkout -b newbranch<h3 id="3-1-4-Git远程-共享-仓库"><a href="#3-1-4-Git远程-共享-仓库" class="headerlink" title="3.1.4 Git远程(共享)仓库"></a>3.1.4 Git远程(共享)仓库</h3><h4 id="创建共享仓库"><a href="#创建共享仓库" class="headerlink" title="创建共享仓库"></a>创建共享仓库</h4></li>
-<li>登陆远程服务器,在里面操作</li>
-<li>Git要求共享仓库是一个以  .git结尾的目录<ul>
-<li>mkdir repo.git</li>
-<li>cd repo.git(进入这个目录)</li>
-</ul>
-</li>
-<li>初始化这个共享仓库,也叫裸仓库<ul>
-<li>git init –bare</li>
-</ul>
-</li>
-<li>这是这个仓库是一个空的仓库,并且不允许在这个仓库中进行任何修改<h4 id="向共享仓库共享内容"><a href="#向共享仓库共享内容" class="headerlink" title="向共享仓库共享内容"></a>向共享仓库共享内容</h4>  git push 共享仓库的地址 上传的分支名称<h4 id="从共享仓库里取出内容"><a href="#从共享仓库里取出内容" class="headerlink" title="从共享仓库里取出内容"></a>从共享仓库里取出内容</h4>  1.新创建一个目录(模拟另外一个开发者)<br>  2.git clone(克隆) 共享仓库地址 文件名<br>  3.git pull 共享仓库地址 文件名<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4></li>
-<li><code>git remote show itcast</code> 查看itcast这个远程主机真正的地址</li>
-<li><code>git push origin hotfix:hotfix</code> 创建的远程的分支为<code>hotfix</code></li>
-<li><code>git push origin hotfix</code>  ===&gt;<code>git push origin hotfix:master</code></li>
-<li><code>git remote add</code> “主机名称” “远程仓库地址”添加远程主机，即给远程主机起个别名，方便使用</li>
-<li><code>git remote</code> 可以查看已添加的远程主<h3 id="3-1-5-如何生成密钥"><a href="#3-1-5-如何生成密钥" class="headerlink" title="3.1.5 如何生成密钥"></a>3.1.5 如何生成密钥</h3></li>
-</ul>
-<ol>
-<li><code>ssh-keygen -t rsa</code></li>
-<li>一路回车<h3 id="3-1-6-GitLab"><a href="#3-1-6-GitLab" class="headerlink" title="3.1.6 GitLab"></a>3.1.6 GitLab</h3><h4 id="分支的管理"><a href="#分支的管理" class="headerlink" title="分支的管理"></a>分支的管理</h4></li>
-<li>不要有太多的树杈（子分支）</li>
-<li>要有一个“稳定分支”，即master分支不要轻意被修改</li>
-<li>要有一个开发分支（developer），保证master分支的稳定性</li>
-<li>所有的功能分支（feature）从developer创建</li>
-<li>所有功能开发完成后新建发布分支（release）<br><img src="地址" alt="图片"></li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/18/03.流行框架--Git02/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-03.流行框架--Git01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="1-1-Shell和vi"><a href="#1-1-Shell和vi" class="headerlink" title="1.1 Shell和vi"></a>1.1 Shell和vi</h2><h3 id="1-1-1-什么shell"><a href="#1-1-1-什么shell" class="headerlink" title="1.1.1 什么shell"></a>1.1.1 什么shell</h3><pre><code>shell就是壳(通过操作壳---&gt;操作核心---&gt;驱动硬件)
-</code></pre><h4 id="shell的分类"><a href="#shell的分类" class="headerlink" title="shell的分类"></a>shell的分类</h4><ol>
-<li>图形界面shell—&gt;桌面图标—&gt;通过提供友好的可视化界面,调用相应应用程序</li>
-<li>命令行shell—&gt;命令行—&gt;通过键盘输入特定命令的方式,调用相应的应用程序<h4 id="window系统中的shell"><a href="#window系统中的shell" class="headerlink" title="window系统中的shell"></a>window系统中的shell</h4></li>
-<li><code>cmd</code></li>
-<li><code>WindowPowerShell</code><h4 id="Linux系统中的shell"><a href="#Linux系统中的shell" class="headerlink" title="Linux系统中的shell"></a>Linux系统中的shell</h4></li>
-<li><code>Boume Shell(sh)</code></li>
-<li><code>Boume Again Shell(bash)</code><h3 id="1-1-2-认识bash这个shell"><a href="#1-1-2-认识bash这个shell" class="headerlink" title="1.1.2 认识bash这个shell"></a>1.1.2 认识bash这个shell</h3></li>
-</ol>
-<ul>
-<li>bash这个软件模拟集成了bash大部分命令</li>
-<li>各个shell的功能差不多,Linux默认使用bush<h3 id="1-1-3-bash中的命令"><a href="#1-1-3-bash中的命令" class="headerlink" title="1.1.3 bash中的命令"></a>1.1.3 bash中的命令</h3><h4 id="bash命令格式"><a href="#bash命令格式" class="headerlink" title="bash命令格式"></a>bash命令格式</h4>  命令 [-options] [参数]<br>  查看bash命令的帮助 :  命令 –help<h4 id="bash常见命令"><a href="#bash常见命令" class="headerlink" title="bash常见命令"></a>bash常见命令</h4></li>
-<li><code>pwd</code> <code>(Print Working Directory)</code>   查看当前目录</li>
-<li><code>cd</code> <code>(Change Directory)</code>  切换目录<ul>
-<li>$cd ../  返回上一级</li>
-<li>$cd bush  进入bush这个目录文件夹</li>
-</ul>
-</li>
-<li><code>ls</code> <code>(List)</code> 查看当前目录下的内容<ul>
-<li>$ ls 4-code(查看某个目录下的内容)</li>
-<li>$ ls -a   (a:all)  查看当前目录下所有的内容</li>
-<li>$ ls l 以列表的形式展示内容(文件名,日期,文件大小等)</li>
-<li>$ ls -a -l (简写:$ ls -al) 查看当前目录下的所有的内容以列表的形式展示出来</li>
-</ul>
-</li>
-<li><code>mkdir</code> <code>(Make Directory)</code> 创建目录<ul>
-<li>$ mkdir css  创建一个名为css的文件夹</li>
-<li>一次创建多个文件夹  文件夹名字中间用空格隔开</li>
-<li>$ mkdir css js images</li>
-</ul>
-</li>
-<li><code>touch</code> 创建文件<ul>
-<li>$ touch index.html  创建相应的文件</li>
-<li>$ touch js/index.js  后面跟的是路径,表示在某个文件夹中创建了一个文件</li>
-</ul>
-</li>
-<li><code>cat</code> 查看文件全部内容  如: $ cat images</li>
-<li><code>more</code>/<code>less</code> 查看文件<ul>
-<li>more 没有集成好,在window中不能用</li>
-<li>less 查看文件中的内容<ul>
-<li>空格 分页查看</li>
-<li>回车 每次查看一行</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>rm</code> <code>(remove)</code> 删除文件<ul>
-<li>不能删除文件夹</li>
-<li>$ rm index.html</li>
-<li>$ rm -rf 可以删除非空目录</li>
-<li>-rf 表示递归强制删除</li>
-</ul>
-</li>
-<li><code>rmdir</code> <code>(Remove Directory)</code> 删除文件夹<ul>
-<li>只能删除空文件夹 不常用</li>
-</ul>
-</li>
-<li><code>mv</code> <code>(move)</code> 移动文件或重命名<ul>
-<li>$ mv index.html image 将index这个文件移动到image这个文件夹中</li>
-<li>$ mv index.html image/aaa.html  在剪切过程中重命名</li>
-</ul>
-</li>
-<li><code>cp</code> <code>(copy)</code> 复制文件<ul>
-<li>$ cp index.html css  将index文件复制到css文件夹中</li>
-</ul>
-</li>
-<li><code>head</code> 查看文件前几行<ul>
-<li>$ head -n 5 index.html  查看index文件的前五行</li>
-<li>简写 $ head -5 index.html</li>
-</ul>
-</li>
-<li><code>tail</code> 查看文件后几行<ul>
-<li>$ tail -f -n 5 index.html  查看index文件的后5行内容</li>
-</ul>
-</li>
-<li><code>tab</code> 自动补全 连按连按两次会将所有匹配内容显示出来.</li>
-<li><code>history</code> 查看操作历史</li>
-<li><code>&gt;</code> / <code>&gt;&gt;</code> 重定向<ul>
-<li><code>&gt;</code> 覆盖  $ echo hello &gt; index.html  输出的hello会将index文件中的内容全部覆盖</li>
-<li><code>&gt;&gt;</code> 追加 $ echo hello &gt;&gt; index.html 输出的hello会加到index文件的内容中</li>
-</ul>
-</li>
-<li><code>wget</code> 下载</li>
-<li><code>tar</code> 解压缩  不能解压.rar .zip格式的</li>
-<li><code>curt</code> 网络请求 例如: $ curl <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a></li>
-<li><code>whoami</code> 查看当前用户</li>
-<li><code>|</code> 管道符可以将多个命令连接使用，上一次（命令）的执行结果当成下一次（命令）的参数</li>
-<li>grep 匹配内容，一般结合管道符使用<h3 id="1-1-4-vi编辑器"><a href="#1-1-4-vi编辑器" class="headerlink" title="1.1.4 vi编辑器"></a>1.1.4 vi编辑器</h3><h4 id="什么是vi编辑器"><a href="#什么是vi编辑器" class="headerlink" title="什么是vi编辑器"></a>什么是vi编辑器</h4>  如同Windows下的记事本，vi编辑器是Linux下的标配，通过它我们可以创建、编辑文件。它是一个随系统一起安装的文本编辑软件。<h4 id="vi编辑器的三种模式"><a href="#vi编辑器的三种模式" class="headerlink" title="vi编辑器的三种模式"></a>vi编辑器的三种模式</h4></li>
-</ul>
-<ol>
-<li>命令模式</li>
-<li>插入模式</li>
-<li>底行模式<h5 id="三种模式的切换"><a href="#三种模式的切换" class="headerlink" title="三种模式的切换"></a>三种模式的切换</h5></li>
-</ol>
-<p><img src="images/1.jpg" alt="三种模式的切换"></p>
-<h5 id="使用vi编辑器"><a href="#使用vi编辑器" class="headerlink" title="使用vi编辑器"></a>使用vi编辑器</h5><ul>
-<li>打开/创建文件， vi 文件路径</li>
-<li>底行模式<ul>
-<li>底行模式 : w保存，:w filenme另存为</li>
-<li>底行模式 : q退出</li>
-<li>底行模式 : wq保存并退出</li>
-<li>底行模式 : e! 撤销更改，返回到上一次保存的状态</li>
-<li>底行模式 : q! 不保存强制退出</li>
-<li>底行模式 : set nu 设置行号</li>
-</ul>
-</li>
-<li>命令模式<ul>
-<li>命令模式 : ZZ（大写）保存并退出</li>
-<li>命令模式 : u辙销操作，可多次使用</li>
-<li>命令模式 : dd删除当前行</li>
-<li>命令模式 : yy复制当前行</li>
-<li>命令模式 : p 粘贴内容</li>
-<li>命令模式 : ctrl+f向前翻页</li>
-<li>命令模式 : ctrl+b向后翻页</li>
-<li>命令模式 : i进入编辑模式，当前光标处插入</li>
-<li>命令模式 : a进入编辑模式，当前光标后插入</li>
-<li>命令模式 : A进入编辑模式，光标移动到行尾</li>
-<li>命令模式 : o进入编辑模式，当前行下面插入新行</li>
-<li>命令模式 : O进入编辑模式，当前行上面插入新行<h3 id="1-1-5-SSH"><a href="#1-1-5-SSH" class="headerlink" title="1.1.5 SSH"></a>1.1.5 SSH</h3>SSH是一种网络协议,用于计算机之间的加密登陆<br>SSH知识一种协议,存在多种实现,OpenSSH–他是自由软件,应用非常广泛<h4 id="常见加密技术"><a href="#常见加密技术" class="headerlink" title="常见加密技术"></a>常见加密技术</h4></li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>对称性加密<ul>
-<li>对称加密算法在加密和解密时使用的是同一个密钥</li>
-</ul>
-</li>
-<li>非对称性加密(SSH使用的是非对称性加密)<ul>
-<li>而非对称加密算法需要两个密钥来进行加密和解密，这两个秘钥分别是公开密钥（public key，简称公钥）和私有密钥（private key，简称私钥）。<h4 id="登陆远程电脑"><a href="#登陆远程电脑" class="headerlink" title="登陆远程电脑"></a>登陆远程电脑</h4></li>
-</ul>
-</li>
-<li>登陆  <code>$ ssh 用户名@IP地址</code></li>
-<li>如果是首次登陆,那么会在本地保存一个公钥,输入<code>yes</code></li>
-<li>输入密码</li>
-<li>进行操作(输入bash命令)</li>
-<li>操作完成之后退出(<code>exit</code>)<h2 id="2-1-版本控制"><a href="#2-1-版本控制" class="headerlink" title="2.1 版本控制"></a>2.1 版本控制</h2> 版本控制（Version Control Systems）是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统<br> 这个系统可以自动帮我们备份文件的每一次更改，并且可以非常方便的恢复到任意的备份（版本）状态</li>
-</ol>
-<h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><ul>
-<li>本地版本控制系统<ul>
-<li>这种类型的版本控制系统,功能比较单一</li>
-<li>很难实现对人协同开发</li>
-<li>保存在本地</li>
-</ul>
-</li>
-<li>集中式版本控制系统<ul>
-<li>通过客户端上传到服务器</li>
-<li>其代表是SVN</li>
-<li>如果服务器出现鼓掌,将会导致数据(版本)丢失,严重依赖网络</li>
-</ul>
-</li>
-<li>分布式版本控制系统<ul>
-<li>不需要中央服务器，每个协同开发者都拥有一个完整的版本库</li>
-<li>代表是Git</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-1了解Git"><a href="#3-1了解Git" class="headerlink" title="3.1了解Git"></a>3.1了解Git</h2><pre><code>多人开发,共享文件,共享代码
-版本控制工具(版本控制工具有很多,比如:SVN)
-</code></pre><h3 id="3-1-1-Git工作原理"><a href="#3-1-1-Git工作原理" class="headerlink" title="3.1.1 Git工作原理"></a>3.1.1 Git工作原理</h3><h4 id="Git的三种状态"><a href="#Git的三种状态" class="headerlink" title="Git的三种状态"></a>Git的三种状态</h4><ol>
-<li>已提交 <code>commotiied</code></li>
-<li>已修改 <code>modified</code></li>
-<li>已暂存 <code>staged</code><h4 id="工作区域概念"><a href="#工作区域概念" class="headerlink" title="工作区域概念"></a>工作区域概念</h4></li>
-<li>Git仓库<ul>
-<li>是Git用来保存项目的元数据和对象数据库的地方</li>
-</ul>
-</li>
-<li>工作目录<ul>
-<li>是对项目的某个版本独立提取出来的内容</li>
-</ul>
-</li>
-<li>暂存区域<ul>
-<li>是一个文件,保存了下一次将提交的文件列表信息</li>
-<li>一般说法叫暂存区域<h4 id="Git基本工作流程"><a href="#Git基本工作流程" class="headerlink" title="Git基本工作流程"></a>Git基本工作流程</h4></li>
-</ul>
-</li>
-<li>在工作目录中修改文件</li>
-<li>暂存文件,将文件的快照放入暂存区域</li>
-<li>提交文件,找到暂存区域的文件,将快照永久性存储到Git仓库目录<h3 id="3-1-2-Git基础"><a href="#3-1-2-Git基础" class="headerlink" title="3.1.2 Git基础"></a>3.1.2 Git基础</h3><h4 id="配置用户"><a href="#配置用户" class="headerlink" title="配置用户"></a>配置用户</h4> $ git config –global user.name”自己的名字”<br> $ git config –global user.email”自己的邮箱地址”</li>
-</ol>
-<ul>
-<li>配置用户只需要执行一次,可以重复使用<h4 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h4>  $ git init</li>
-</ul>
-<ul>
-<li>git init 只是创建了一个名为.git的隐藏目录,这就存储我们历史版本的仓库</li>
-<li>$ ls -al 可以查看<h4 id="查看文件状态"><a href="#查看文件状态" class="headerlink" title="查看文件状态"></a>查看文件状态</h4>  $ git status</li>
-<li>git会忽略空白的目录<h4 id="添加文件到暂存区"><a href="#添加文件到暂存区" class="headerlink" title="添加文件到暂存区"></a>添加文件到暂存区</h4>  $ git add 文件名  -A或者是 *  代表所有</li>
-<li>放到暂存区的文件被标记成了绿色，等待提交。<h4 id="撤销更改"><a href="#撤销更改" class="headerlink" title="撤销更改"></a>撤销更改</h4>  $ git checkout 文件名</li>
-<li>将暂存区的内容还原到工作区<h4 id="提交文件"><a href="#提交文件" class="headerlink" title="提交文件"></a>提交文件</h4>  $ git commit -m ‘备注信息’</li>
-<li>-m一定不能省去</li>
-<li>将暂存区被标记成绿色的文件，全部提交到本地仓库存储</li>
-<li>并且生成一个新版本/存盘点<h4 id="查看提交历史"><a href="#查看提交历史" class="headerlink" title="查看提交历史"></a>查看提交历史</h4>  $ git log</li>
-<li>查看当前版本/历史/存盘点<h4 id="恢复上一次提交的状态"><a href="#恢复上一次提交的状态" class="headerlink" title="恢复上一次提交的状态"></a>恢复上一次提交的状态</h4>  $ git reset –herd SHA值</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/18/03.流行框架--Git01/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-02.封装轻量级的jQuery-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="jQuery中的ajax"><a href="#jQuery中的ajax" class="headerlink" title="jQuery中的ajax"></a>jQuery中的ajax</h1>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/18/02.封装轻量级的jQuery-2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-02.封装轻量级的jQuery-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="onreadystatechange事件"><a href="#onreadystatechange事件" class="headerlink" title="onreadystatechange事件"></a>onreadystatechange事件</h3><blockquote>
-<p><code>onreadystatechange</code>事件是微软对IE浏览器的私有事件阔重重,所有元素都存在<code>onreadystatechange</code>事件<br> 下列元素对象够可以触发此事件,因为他们均会加载数据:<code>applet</code>/<code>document</code>/<code>frame</code>/<code>frameset</code>/<br> <code>iframe</code>/<code>img</code>/<code>link</code>/<code>object</code>/<code>script</code>和<code>xml</code>元素.其他元素对象仅当<code>DHTMLBehavior</code>被追加后回出发<code>onreadystatechange</code>事件</p>
-<h3 id="DOMContentLoaded事件"><a href="#DOMContentLoaded事件" class="headerlink" title="DOMContentLoaded事件"></a>DOMContentLoaded事件</h3><p>这个事件是H5新增的,兼容IE9<br>会在DOM解析完成之后触发,这个事件要比<code>onload</code>事件快很多,但是也会有例外.<br>如果发生了例外,<code>DOMContentLoaded</code>事件和<code>onload</code>事件触发的时间间隔相差不会很大<br>所以可以认为<code>DOMContentLoaded</code>事件比<code>onload</code>事件快,只监听<code>DOMContentLoaded</code>事件即可</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/18/02.封装轻量级的jQuery-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-01.Canvas-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="2-中级篇"><a href="#2-中级篇" class="headerlink" title="2.中级篇"></a>2.中级篇</h1><h2 id="2-1-绘制形状"><a href="#2-1-绘制形状" class="headerlink" title="2.1. 绘制形状"></a>2.1. 绘制形状</h2><p>绘制图形不仅仅是利用线条来实现绘图, 还可以有快捷的绘制图形的办法</p>
-<ol>
-<li>绘制矩形</li>
-<li>绘制圆弧<h3 id="2-1-1-绘制矩形"><a href="#2-1-1-绘制矩形" class="headerlink" title="2.1.1. 绘制矩形"></a>2.1.1. 绘制矩形</h3></li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/18/01.Canvas-2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-01.Canvas-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-01.Canvas-1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
@@ -869,49 +336,26 @@
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/18/01.Canvas-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-05.Nodejs-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Nodejs介绍"><a href="#Nodejs介绍" class="headerlink" title="Nodejs介绍"></a>Nodejs介绍</h3><p>nodejs是基于js<br>node.js和JavaScript的关系?<br>node.js的特点和好处<br>cmd命令  清楚屏幕上的内容  cls<br>通过在REPL交互式运行环境<br>不写var 不能确定定义的这个变量到底是干什么的…赋值还是定义的全局变量<br>全局变量:<br>global.a=123 和 a=123 的定义是一直的<br>console.assert(foo==1,’失败’)  断言(用来测试的)<br>console.time()和console.timeEnd()是成对出现的<br>console.log(<strong>dirname)输出当前文件所在的路径<br>console.log(</strong>filename)输出当前文件的全路径</p>
-<p>require缓存的是module对象</p>
-<p>当执行npm install 的时候,他会自动跑到npm的网站,然后找到该<br>npm -g install + 包名  全局安装<br>npm在安装的时候,在全局设置了一个安装全局的目录<br>install的包安装到npm的去全局目录中<br>安装的包有两种类型:安装到全局的(安装命令行工具)  不安装到全局的(工具包)<br>npm docs + 包名  例如: npm docs jquery 打开jquery的文档  链接的地址是自己在写包的时候添加的<br>npm install –save 生产环境<br>简写:<br>npm install -save-dev  开发环境<br>简写: npm i -D jquery@3.<em>  (jquery@3.</em> 下载指定的包,@后面的是版本号)<br>npm config set prefix 修改全局安装目录  (不建议使用,容易手抖改错)<br>建议到文件夹里修改(C:\users\用户名  里面有一个.npmrc的文件  改prefix=自己的路径  去全局的环境修改path)<br>name: 包名要与外面的文件夹名字一致(不一致也可以,但是容易出现错误)<br>关键词:通过搜索关键词来找到相应的包,并且下载下来<br>repository: 包所在的位置<br>license: 是否开源  MIT(开源)<br>包名是唯一的</p>
-<p>当函数体有一个参数有返回值的时候</p>
-<p>var foo=function(v){ return v;}<br>var foo=v=&gt;v;<br>当函数体没有参数有返回值的时候</p>
-<p>var foo=function(){ return v;}</p>
-<p>var foo=()=&gt;v;<br>当函数体有多个参数有返回值的时候</p>
-<p>var foo=function(v1,v2){ return v1+v2;}<br>var foo=(v1,v2)=&gt;v1+v2;<br>当函数体有多个参数没有返回值的时候<br>var foo=function(v1,v2){<br>  console.log(v1); console.log(v2);<br>  }<br>var foo=(v1,v2)=&gt;{<br>  console.log(v1); console.log(v2);<br>  };</p>
-<p>mvvm<br> m model  v view  vm view-model (也就是$scop)<br>mvc  模型  链接数据库的    视图 展示  控制器 写主要逻辑的<br>双向数据绑定<br>监听<br>angular核心机制</p>
-<h1 id="脏检查-非常重要"><a href="#脏检查-非常重要" class="headerlink" title="脏检查   (非常重要)"></a>脏检查   (非常重要)</h1>
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -920,78 +364,90 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/18/05.Nodejs-2/">展开全文 >></a>
-        </p>
-      
 
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-JavaScript-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/18/JavaScript-1/">JavaScript-1</a>
-    </h1>
-  
-
-        <a href="/2016/12/18/JavaScript-1/" class="archive-article-date">
-  	<time datetime="2016-12-18T08:39:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
       
         
-      
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
 
-      
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/12/18/01.Canvas-1/" alt="微信分享二维码">
     </div>
-    <div class="article-info article-info-index">
-      
-      
-      
+</div>
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/18/JavaScript-1/">展开全文 >></a>
-        </p>
-      
-
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
-
-
-
+  
+<nav id="article-nav">
+  
+    <a href="/2016/12/18/01.Canvas-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+    <a href="/2016/12/18/05.Nodejs-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
   
+</nav>
+
+
+
+
+
+
+
 
 
           </div>
@@ -1013,8 +469,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

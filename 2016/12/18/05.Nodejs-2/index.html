@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016/12 | 我的博客</title>
+  <title>我的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Nodejs介绍nodejs是基于jsnode.js和JavaScript的关系?node.js的特点和好处cmd命令  清楚屏幕上的内容  cls通过在REPL交互式运行环境不写var 不能确定定义的这个变量到底是干什么的…赋值还是定义的全局变量全局变量:global.a=123 和 a=123 的定义是一直的console.assert(foo==1,’失败’)  断言(用来测试的)conso">
+<meta property="og:type" content="article">
 <meta property="og:title" content="我的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2016/12/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/12/18/05.Nodejs-2/index.html">
 <meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="Nodejs介绍nodejs是基于jsnode.js和JavaScript的关系?node.js的特点和好处cmd命令  清楚屏幕上的内容  cls通过在REPL交互式运行环境不写var 不能确定定义的这个变量到底是干什么的…赋值还是定义的全局变量全局变量:global.a=123 和 a=123 的定义是一直的console.assert(foo==1,’失败’)  断言(用来测试的)conso">
+<meta property="og:updated_time" content="2016-12-01T03:54:22.805Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的博客">
+<meta name="twitter:description" content="Nodejs介绍nodejs是基于jsnode.js和JavaScript的关系?node.js的特点和好处cmd命令  清楚屏幕上的内容  cls通过在REPL交互式运行环境不写var 不能确定定义的这个变量到底是干什么的…赋值还是定义的全局变量全局变量:global.a=123 和 a=123 的定义是一直的console.assert(foo==1,’失败’)  断言(用来测试的)conso">
   
     <link rel="alternative" href="/atom.xml" title="我的博客" type="application/atom+xml">
   
@@ -139,238 +143,136 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-05.Nodejs-2" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Nodejs介绍"><a href="#Nodejs介绍" class="headerlink" title="Nodejs介绍"></a>Nodejs介绍</h3><p>nodejs是基于js<br>node.js和JavaScript的关系?<br>node.js的特点和好处<br>cmd命令  清楚屏幕上的内容  cls<br>通过在REPL交互式运行环境<br>不写var 不能确定定义的这个变量到底是干什么的…赋值还是定义的全局变量<br>全局变量:<br>global.a=123 和 a=123 的定义是一直的<br>console.assert(foo==1,’失败’)  断言(用来测试的)<br>console.time()和console.timeEnd()是成对出现的<br>console.log(<strong>dirname)输出当前文件所在的路径<br>console.log(</strong>filename)输出当前文件的全路径</p>
+<p>require缓存的是module对象</p>
+<p>当执行npm install 的时候,他会自动跑到npm的网站,然后找到该<br>npm -g install + 包名  全局安装<br>npm在安装的时候,在全局设置了一个安装全局的目录<br>install的包安装到npm的去全局目录中<br>安装的包有两种类型:安装到全局的(安装命令行工具)  不安装到全局的(工具包)<br>npm docs + 包名  例如: npm docs jquery 打开jquery的文档  链接的地址是自己在写包的时候添加的<br>npm install –save 生产环境<br>简写:<br>npm install -save-dev  开发环境<br>简写: npm i -D jquery@3.<em>  (jquery@3.</em> 下载指定的包,@后面的是版本号)<br>npm config set prefix 修改全局安装目录  (不建议使用,容易手抖改错)<br>建议到文件夹里修改(C:\users\用户名  里面有一个.npmrc的文件  改prefix=自己的路径  去全局的环境修改path)<br>name: 包名要与外面的文件夹名字一致(不一致也可以,但是容易出现错误)<br>关键词:通过搜索关键词来找到相应的包,并且下载下来<br>repository: 包所在的位置<br>license: 是否开源  MIT(开源)<br>包名是唯一的</p>
+<p>当函数体有一个参数有返回值的时候</p>
+<p>var foo=function(v){ return v;}<br>var foo=v=&gt;v;<br>当函数体没有参数有返回值的时候</p>
+<p>var foo=function(){ return v;}</p>
+<p>var foo=()=&gt;v;<br>当函数体有多个参数有返回值的时候</p>
+<p>var foo=function(v1,v2){ return v1+v2;}<br>var foo=(v1,v2)=&gt;v1+v2;<br>当函数体有多个参数没有返回值的时候<br>var foo=function(v1,v2){<br>  console.log(v1); console.log(v2);<br>  }<br>var foo=(v1,v2)=&gt;{<br>  console.log(v1); console.log(v2);<br>  };</p>
+<p>mvvm<br> m model  v view  vm view-model (也就是$scop)<br>mvc  模型  链接数据库的    视图 展示  控制器 写主要逻辑的<br>双向数据绑定<br>监听<br>angular核心机制</p>
+<h1 id="脏检查-非常重要"><a href="#脏检查-非常重要" class="headerlink" title="脏检查   (非常重要)"></a>脏检查   (非常重要)</h1>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/18/05.Nodejs-1/" class="archive-article-date">
-  	<time datetime="2016-12-18T13:17:38.115Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/12/18/05.Nodejs-2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/18/04.流行框架--AngularJS01/" class="archive-article-date">
-  	<time datetime="2016-12-18T13:17:38.113Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/18/03.流行框架--Git02/" class="archive-article-date">
-  	<time datetime="2016-12-18T13:17:38.090Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2016/12/18/01.Canvas-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/18/JavaScript-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript-1</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/18/03.流行框架--Git01/" class="archive-article-date">
-  	<time datetime="2016-12-18T13:17:38.037Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/18/02.封装轻量级的jQuery-2/" class="archive-article-date">
-  	<time datetime="2016-12-18T13:17:38.035Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/18/02.封装轻量级的jQuery-1/" class="archive-article-date">
-  	<time datetime="2016-12-18T13:17:37.751Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/18/01.Canvas-2/" class="archive-article-date">
-  	<time datetime="2016-12-18T13:17:37.748Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/18/01.Canvas-1/" class="archive-article-date">
-  	<time datetime="2016-12-18T13:17:37.745Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/18/05.Nodejs-2/" class="archive-article-date">
-  	<time datetime="2016-12-18T13:17:37.545Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/18/JavaScript-1/" class="archive-article-date">
-  	<time datetime="2016-12-18T08:39:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/18/JavaScript-1/">JavaScript-1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -393,8 +295,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
