@@ -141,6 +141,57 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-实现浏览器内多个标签页之间的通信" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/29/实现浏览器内多个标签页之间的通信/">如何实现浏览器内多个标签页之间的通信</a>
+    </h1>
+  
+
+        <a href="/2016/12/29/实现浏览器内多个标签页之间的通信/" class="archive-article-date">
+  	<time datetime="2016-12-29T13:35:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-29</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="调用localStorage-cookies等本地存储的方式"><a href="#调用localStorage-cookies等本地存储的方式" class="headerlink" title="调用localStorage,cookies等本地存储的方式"></a>调用localStorage,cookies等本地存储的方式</h3><h4 id="方法一-使用localStorage"><a href="#方法一-使用localStorage" class="headerlink" title="方法一:使用localStorage"></a>方法一:使用localStorage</h4><p>使用localStorage.setItem(key,value);添加调用的内容<br>使用storage事件监听添加/删除/修改的动作<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"storage"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">    $(<span class="string">"#name"</span>).val(event.key +<span class="string">"="</span>+ event.newValue);</div><div class="line">    &#125;)</div></pre></td></tr></table></figure></p>
+<h4 id="方法二-使用cookie-setInterval"><a href="#方法二-使用cookie-setInterval" class="headerlink" title="方法二:使用cookie+setInterval"></a>方法二:使用cookie+setInterval</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"name"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn"</span> <span class="attr">value</span>=<span class="string">"发送"</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $(<span class="string">"#btn"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> name = $(<span class="string">"#name"</span>).val;</div><div class="line">        <span class="built_in">document</span>.cookie = <span class="string">"name = "</span>+name;</div><div class="line">        &#125;)</div><div class="line">    &#125;);</div><div class="line">    <span class="comment">//获取cookie中的内容</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getKey</span>(<span class="params">key</span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(<span class="string">"&#123;\""</span>+ <span class="built_in">document</span>.cookie.replace(<span class="regexp">/;\s+/gim</span>,<span class="string">"\",\""</span>).replace(<span class="regexp">/=/gim</span>, <span class="string">"\":\""</span>) +<span class="string">"\"&#125;"</span>)[key]</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//每隔1秒获取cookie的内容</span></div><div class="line">    setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(getKey(<span class="string">"name"</span>));</div><div class="line">        &#125;,<span class="number">1000</span>);</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/29/实现浏览器内多个标签页之间的通信/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Canvas 高级篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -588,7 +639,7 @@
 <h4 id="打印正方形和三角形"><a href="#打印正方形和三角形" class="headerlink" title="打印正方形和三角形"></a>打印正方形和三角形</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//需求：打印宽9，长9的正方形。</span></div><div class="line"><span class="comment">//for(var k=1;k&lt;=9;k++)&#123;</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">1</span>;j&lt;=<span class="number">9</span>;j++)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;=<span class="number">9</span>;i++)&#123;</div><div class="line">            <span class="built_in">document</span>.write(<span class="string">"☆"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">document</span>.write(<span class="string">"&lt;br&gt;"</span>);</div><div class="line">    &#125;</div><div class="line"><span class="comment">//    document.write("&lt;br&gt;");</span></div><div class="line"><span class="comment">//&#125;</span></div><div class="line"><span class="built_in">document</span>.write(<span class="string">"&lt;br&gt;"</span>);</div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//需求：打印三角形(外循环控制行，内循环控制列)</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">1</span>;j&lt;=<span class="number">9</span>;j++)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;=j;i++)&#123;</div><div class="line">            <span class="built_in">document</span>.write(<span class="string">"☆"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">document</span>.write(<span class="string">"&lt;br&gt;"</span>);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <h4 id="打印九九乘法表"><a href="#打印九九乘法表" class="headerlink" title="打印九九乘法表"></a>打印九九乘法表</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;=<span class="number">9</span>;i++)&#123;</div><div class="line">       <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">1</span>;j&lt;=i;j++)&#123;</div><div class="line">           <span class="built_in">document</span>.write(i+<span class="string">"*"</span>+j+<span class="string">"="</span>+i*j+<span class="string">"  "</span>);</div><div class="line">       &#125;</div><div class="line">       <span class="built_in">document</span>.write(<span class="string">"&lt;br&gt;"</span>);</div><div class="line">   &#125;</div><div class="line">    <span class="built_in">document</span>.write(<span class="string">"&lt;table border='1'&gt;"</span>);</div><div class="line">    <span class="comment">//在这里面利用for循环输出tr和td...</span></div><div class="line">    <span class="built_in">document</span>.write(<span class="string">"&lt;/table&gt;"</span>);</div></pre></td></tr></table></figure>
-
+<h4 id="6-3-2-while循环"><a href="#6-3-2-while循环" class="headerlink" title="6.3.2 while循环"></a>6.3.2 while循环</h4>
       
 
       
