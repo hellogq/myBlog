@@ -141,62 +141,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Javascript-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/05/Javascript-3/">Javascript 数组</a>
-    </h1>
-  
-
-        <a href="/2017/01/05/Javascript-3/" class="archive-article-date">
-  	<time datetime="2017-01-05T14:03:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-05</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="1-数组的概念"><a href="#1-数组的概念" class="headerlink" title="1 数组的概念"></a>1 数组的概念</h1><h3 id="1-1-数组的概念"><a href="#1-1-数组的概念" class="headerlink" title="1.1 数组的概念"></a>1.1 数组的概念</h3><pre><code>数组是一种数据类型.(把很多数据装入一个盒子中,用的时候再取出来)
-</code></pre><h3 id="1-2数组的定义"><a href="#1-2数组的定义" class="headerlink" title="1.2数组的定义"></a>1.2数组的定义</h3><h4 id="1-2-1-字面量定义"><a href="#1-2-1-字面量定义" class="headerlink" title="1.2.1 字面量定义"></a>1.2.1 字面量定义</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div></pre></td></tr></table></figure>
-<h4 id="1-2-2-对象定义-数组的构造函数"><a href="#1-2-2-对象定义-数组的构造函数" class="headerlink" title="1.2.2 对象定义(数组的构造函数)"></a>1.2.2 对象定义(数组的构造函数)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(参数);</div><div class="line">参数为一个数值的时候为数组的长度,多个数值时为数组中的元素.</div></pre></td></tr></table></figure>
-<h3 id="1-3-数组的操作"><a href="#1-3-数组的操作" class="headerlink" title="1.3 数组的操作"></a>1.3 数组的操作</h3><h4 id="1-3-1-求数组的长度"><a href="#1-3-1-求数组的长度" class="headerlink" title="1.3.1 求数组的长度"></a>1.3.1 求数组的长度</h4><pre><code>数组的长度 = 数组名.length;
-</code></pre><p>可以通过修改数组的长度来改变数组元素的报个数,如果改小了,数组从<br>后面删除元素.(伪数组的长苏可以修改,但是不能修改里面的元素)</p>
-<h4 id="1-3-2-获取数组中的元素"><a href="#1-3-2-获取数组中的元素" class="headerlink" title="1.3.2 获取数组中的元素"></a>1.3.2 获取数组中的元素</h4><pre><code>数组中的指定元素 = 数组名[索引值];
-</code></pre><p>数组的索引代表的是数组中的元素在数组中的位置,从0开始.<br>如果会哦去数组中元素是,数组名[索引值],没有制定索引(元素没有那么多),<br>系统报错,而是给定值为undefined.</p>
-<h3 id="1-4-遍历数组-获取并操作数组中的每一个元素"><a href="#1-4-遍历数组-获取并操作数组中的每一个元素" class="headerlink" title="1.4 遍历数组(获取并操作数组中的每一个元素)"></a>1.4 遍历数组(获取并操作数组中的每一个元素)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</div><div class="line">    arr[i]; <span class="comment">//操作数组中的每一个元素</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/05/Javascript-3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-实现浏览器内多个标签页之间的通信" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -624,6 +568,62 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/11/24/AngularJS/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Javascript-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/20/Javascript-3/">Javascript 数组</a>
+    </h1>
+  
+
+        <a href="/2016/08/20/Javascript-3/" class="archive-article-date">
+  	<time datetime="2016-08-20T14:03:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-20</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-数组的概念"><a href="#1-数组的概念" class="headerlink" title="1 数组的概念"></a>1 数组的概念</h1><h3 id="1-1-数组的概念"><a href="#1-1-数组的概念" class="headerlink" title="1.1 数组的概念"></a>1.1 数组的概念</h3><pre><code>数组是一种数据类型.(把很多数据装入一个盒子中,用的时候再取出来)
+</code></pre><h3 id="1-2数组的定义"><a href="#1-2数组的定义" class="headerlink" title="1.2数组的定义"></a>1.2数组的定义</h3><h4 id="1-2-1-字面量定义"><a href="#1-2-1-字面量定义" class="headerlink" title="1.2.1 字面量定义"></a>1.2.1 字面量定义</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div></pre></td></tr></table></figure>
+<h4 id="1-2-2-对象定义-数组的构造函数"><a href="#1-2-2-对象定义-数组的构造函数" class="headerlink" title="1.2.2 对象定义(数组的构造函数)"></a>1.2.2 对象定义(数组的构造函数)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(参数);</div><div class="line">参数为一个数值的时候为数组的长度,多个数值时为数组中的元素.</div></pre></td></tr></table></figure>
+<h3 id="1-3-数组的操作"><a href="#1-3-数组的操作" class="headerlink" title="1.3 数组的操作"></a>1.3 数组的操作</h3><h4 id="1-3-1-求数组的长度"><a href="#1-3-1-求数组的长度" class="headerlink" title="1.3.1 求数组的长度"></a>1.3.1 求数组的长度</h4><pre><code>数组的长度 = 数组名.length;
+</code></pre><p>可以通过修改数组的长度来改变数组元素的报个数,如果改小了,数组从<br>后面删除元素.(伪数组的长苏可以修改,但是不能修改里面的元素)</p>
+<h4 id="1-3-2-获取数组中的元素"><a href="#1-3-2-获取数组中的元素" class="headerlink" title="1.3.2 获取数组中的元素"></a>1.3.2 获取数组中的元素</h4><pre><code>数组中的指定元素 = 数组名[索引值];
+</code></pre><p>数组的索引代表的是数组中的元素在数组中的位置,从0开始.<br>如果会哦去数组中元素是,数组名[索引值],没有制定索引(元素没有那么多),<br>系统报错,而是给定值为undefined.</p>
+<h3 id="1-4-遍历数组-获取并操作数组中的每一个元素"><a href="#1-4-遍历数组-获取并操作数组中的每一个元素" class="headerlink" title="1.4 遍历数组(获取并操作数组中的每一个元素)"></a>1.4 遍历数组(获取并操作数组中的每一个元素)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</div><div class="line">    arr[i]; <span class="comment">//操作数组中的每一个元素</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/08/20/Javascript-3/">展开全文 >></a>
         </p>
       
 
