@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>装逼之作-impressJS(一个制作ppt的框架) | 我的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="近几天有个PPT要做，我在想，作为一个码农，那么就应该用代码写个PPT出来。于是乎，在知乎上找到了一个制作PPT的框架。嘿嘿嘿….impress.js 是国外一位开发者受 Prezi 启发，采用 CSS3 与 JavaScript 语言完成的一个可供开发者使用的表现层框架(演示工具)。现在普通开发者可以利用 impress.js 自己开发出类似效果的演示工具，但性能比基于 FLASH 的 Prez">
+<meta property="og:type" content="article">
+<meta property="og:title" content="装逼之作-impressJS(一个制作ppt的框架)">
+<meta property="og:url" content="http://yoursite.com/2017/03/29/装逼之作-revealJS和impressJS/index.html">
+<meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="近几天有个PPT要做，我在想，作为一个码农，那么就应该用代码写个PPT出来。于是乎，在知乎上找到了一个制作PPT的框架。嘿嘿嘿….impress.js 是国外一位开发者受 Prezi 启发，采用 CSS3 与 JavaScript 语言完成的一个可供开发者使用的表现层框架(演示工具)。现在普通开发者可以利用 impress.js 自己开发出类似效果的演示工具，但性能比基于 FLASH 的 Prez">
+<meta property="og:image" content="data:image/png;base64,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">
+<meta property="og:updated_time" content="2017-04-16T15:01:26.453Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="装逼之作-impressJS(一个制作ppt的框架)">
+<meta name="twitter:description" content="近几天有个PPT要做，我在想，作为一个码农，那么就应该用代码写个PPT出来。于是乎，在知乎上找到了一个制作PPT的框架。嘿嘿嘿….impress.js 是国外一位开发者受 Prezi 启发，采用 CSS3 与 JavaScript 语言完成的一个可供开发者使用的表现层框架(演示工具)。现在普通开发者可以利用 impress.js 自己开发出类似效果的演示工具，但性能比基于 FLASH 的 Prez">
+<meta name="twitter:image" content="data:image/png;base64,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">
+  
+    <link rel="alternative" href="/atom.xml" title="我的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css?v=4.0.0.css">
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="http://img5.imgtn.bdimg.com/it/u=3386703755,252768078&amp;fm=11&amp;gp=0.jpg" class="js-avatar">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">高群</a></h1>
+		</hgroup>
+
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/随笔/">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a data-idx="1" q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a data-idx="2" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">高群</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="http://img5.imgtn.bdimg.com/it/u=3386703755,252768078&amp;fm=11&amp;gp=0.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">高群</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/随笔/">随笔</a></li>
+		        
+		        
+		        	<li><a href="/archives/">所有文章</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-装逼之作-revealJS和impressJS" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      装逼之作-impressJS(一个制作ppt的框架)
+    </h1>
+  
+
+        <a href="/2017/03/29/装逼之作-revealJS和impressJS/" class="archive-article-date">
+  	<time datetime="2017-03-29T13:37:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-29</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>近几天有个PPT要做，我在想，作为一个码农，那么就应该用代码写个PPT出来。于是乎，在知乎上找到了一个制作PPT的框架。嘿嘿嘿….<br>impress.js 是国外一位开发者受 Prezi 启发，采用 CSS3 与 JavaScript 语言完成的一个可供开发者使用的表现层框架(演示工具)。现在普通开发者可以利用 impress.js 自己开发出类似效果的演示工具，但性能比基于 FLASH 的 Prezi 更优。其功能包括画布的无限旋转与缩放，任意角度放置任意大小的文字，CSS3 3D 效果支持等。同时，也支持传统 PowerPoint 形式的幻灯演示。<br>目前 impress.js 是基于 webkit 浏览器（Chrome、Safari）开发，而在其它基于非 webkit 引擎，但支持 CSS3 3D 的浏览器也能正常运行。</p>
+<p>impreess源码已经发布在GitHub上，地址：<a href="https://github.com/bartaz/impress.js" target="_blank" rel="external">https://github.com/bartaz/impress.js</a></p>
+<p>官方demo地址：<a href="http://bartaz.github.com/impress.js" target="_blank" rel="external">http://bartaz.github.com/impress.js</a><br><code>请准备好现代浏览器：Google Chrome(效果最佳)、Safari或者FF</code><br><code>我的IE10不支持</code></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ul>
+<li>html5页面结构优先准备就绪</li>
+<li>创建一个id=”impress”的wrappe(载体)，直接div就好，其他标签同样也可以</li>
+<li>在body标签结束前引入impress.js文件并且调用</li>
+<li>class = “impress-not-supported”是当浏览器不只是显示给用户的提示信息，降级处理你懂得</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">　　<span class="tag">&lt;<span class="name">title</span>&gt;</span>darren - Impress demo<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">　　<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> /&gt;</span></div><div class="line">　　<span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"http://bartaz.github.com/impress.js/css/impress-demo.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"impress-not-supported"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">　　<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"impress"</span>&gt;</span></div><div class="line">　　<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">　　<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://bartaz.github.com/impress.js/js/impress.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">　　<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">impress().init();</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>在wrapper中创建一个幻灯片只需要新建一个<code>class = &quot;step&quot;</code>的div即可。<div>的id可有可无，当有id时，url中的hash变化时随着id走的；反之就是step-[num],例如<img src="data:image/png;base64,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"></div></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"step"</span>&gt;</span></div><div class="line">    first slide</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="数据属性："><a href="#数据属性：" class="headerlink" title="数据属性："></a>数据属性：</h4><p>用来描述幻灯片大小，切换等效果</p>
+<ul>
+<li>data-x  == 幻灯片x轴坐标</li>
+<li>data-y  == 幻灯片y轴坐标</li>
+<li>data-scale  == 通过指定一个值来进行缩放，data-scale为5则将会在你的幻灯片原始尺寸基础上放大5倍</li>
+<li>data-rotate  == 通过一个数字来确定旋转你的幻灯片</li>
+<li>data-rotate-x  == 为3D用，这个数字度数是他应该相对x轴旋转多少度 （前倾/后仰）</li>
+<li>data-rotate-y = 为3D用，这个数字度数是它应该相对y轴旋转多少度 （左摆/右摆）</li>
+<li>data-rotate-z = 为3D用，这个数字度数是它应该相对z轴旋转多少度</li>
+</ul>
+<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>从一个初试的幻灯片开始，这个幻灯片已将他data-x和data-y数据属性设置为0，所以会出现在页面的中间。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"step"</span> <span class="attr">data-x</span> = <span class="string">"0"</span> <span class="attr">data-y</span> = <span class="string">"0"</span>&gt;</span></div><div class="line">    this is slide 1</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>第二张幻灯片的data-x值为500，data-y值为0，活动的时候他将会向左平移500px的地方<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"step"</span> <span class="attr">data-x</span> = <span class="string">"500"</span> <span class="attr">data-y</span> = <span class="string">"0"</span>&gt;</span></div><div class="line">    this is slide 2</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>第三张幻灯片其data-x值不变，data-y位置为-400，这将会是从顶部400px处滑入屏幕。　<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"step"</span> <span class="attr">data-x</span>=<span class="string">"500"</span> <span class="attr">data-y</span>=<span class="string">"-400"</span>&gt;</span></div><div class="line">    This is slide 3</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>第三张幻灯片其data-x值不变，data-y位置为-400，这将会是从顶部400px处滑入屏幕。　<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"step"</span> <span class="attr">data-x</span>=<span class="string">"500"</span> <span class="attr">data-y</span>=<span class="string">"-400"</span>&gt;</span></div><div class="line">    This is slide 3</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>第四张幻灯片来个新花样，使用data-scale的值控制其缩放大小。data-scale=”0.5”表示着它应该是一半的尺寸，当它变成活动的演示时将通过必需的倍数调节所有幻灯片的缩放尺寸，从这一步绚丽开始起步<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"step"</span> <span class="attr">data-x</span>=<span class="string">"500"</span> <span class="attr">data-y</span>=<span class="string">"-800"</span> <span class="attr">data-scale</span>=<span class="string">"0.5"</span>&gt;</span></div><div class="line">    This is slide 4</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>第五张幻灯片旋转属性允许你旋转一个幻灯片到当前视图，幻灯片5被设置旋转90度，视觉效果微叼哈<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"step"</span> <span class="attr">data-x</span>=<span class="string">"0"</span> <span class="attr">data-y</span>=<span class="string">"-800"</span> <span class="attr">data-rotate</span>=<span class="string">"90"</span>&gt;</span></div><div class="line">    This is slide 5</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>第六张幻灯片开始3D style，可为每个维度的轴指定旋转属性(x,y,z)。x轴是横轴，意思是你可使事物倾斜(正值)或向后(负值)，y轴是竖轴，所以你可使事物向左摇摆(负值)或向右(正值)，z轴是纵轴，这将是旋转的东西向上（负值）和向下（正值）。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"step"</span> <span class="attr">data-x</span>=<span class="string">"-1200"</span> <span class="attr">data-y</span>=<span class="string">"0"</span> </span></div><div class="line">    <span class="attr">data-rotate-x</span>=<span class="string">"30"</span> <span class="attr">data-rotate-y</span>=<span class="string">"-30"</span> <span class="attr">data-rotate-z</span>=<span class="string">"90"</span> <span class="attr">data-scale</span>=<span class="string">"4"</span>&gt;</div><div class="line">　　This is slide 6</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>以上6张幻灯片把数据属性内的值都过了一遍，一张略high的演示文稿就呈现在我们眼前。你可以以你的想象力用不可思议的和令人惊奇的方式合并这些效果来创建你自己的幻灯片展示风格。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"overview"</span> <span class="attr">class</span>=<span class="string">"step"</span> <span class="attr">data-x</span>=<span class="string">"-200"</span> <span class="attr">data-y</span>=<span class="string">"-500"</span> <span class="attr">data-scale</span>=<span class="string">"3"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>结尾</p>
+<p>参考：<a href="http://www.cnblogs.com/Darren_code/" target="_blank" rel="external">http://www.cnblogs.com/Darren_code/</a></p>
+<p>不知不觉，又到这个点了。宝宝已经困的睁不开眼了== 作为一名合格程序员，怎能如此之早的睡呢？！【哭笑脸】</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/29/装逼之作-revealJS和impressJS/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/04/16/vueJS入坑-父组件向子组件传值/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          vueJS入坑-父组件向子组件传值
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/22/webpack入坑-模块引入/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">webpack入坑-模块引入</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 高群
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js?v=4.0.0.js"></script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
